@@ -1,10 +1,10 @@
 {
-  "name": "nerdtree",
-  "displayName": "NERDTree",
+  "name": "nerdtree-pro",
+  "displayName": "NERDTREE-pro",
   "description": "⌨️ NERDTree for Visual Studio Code",
   "icon": "docs/icon.png",
   "version": "1.2.1",
-  "publisher": "Llam4u",
+  "publisher": "finger",
   "keywords": [
     "NERDTree",
     "vim",
@@ -148,7 +148,7 @@
     ]
   },
   "scripts": {
-    "vscode:prepublish": "yarn run package",
+    "vscode:prepublish": "pnpm run package",
     "compile": "webpack",
     "watch": "webpack --watch",
     "package": "webpack --mode production --devtool hidden-source-map",
@@ -156,7 +156,7 @@
     "publish": "vsce publish",
     "compile-tests": "tsc -p . --outDir out",
     "watch-tests": "tsc -p . -w --outDir out",
-    "pretest": "yarn run compile-tests && yarn run compile && yarn run lint",
+    "pretest": "pnpm run compile-tests && pnpm run compile && pnpm run lint",
     "lint": "eslint src --ext ts",
     "test": "node ./out/test/runTest.js"
   },

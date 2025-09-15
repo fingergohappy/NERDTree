@@ -5,6 +5,8 @@
 
 This extension is [NERDTree](https://github.com/preservim/nerdtree) keybinding like for [Visual Studio Code](https://code.visualstudio.com).
 
+> **Note**: This is a fork of the original [NERDTree by Llam4u](https://marketplace.visualstudio.com/items?itemName=Llam4u.nerdtree).
+
 <details>
 	<summary>🗄 <strong>Table of Contents</strong> (click to expand)</summary>
 
@@ -44,6 +46,18 @@ This setting will disable `Ctrl + N` from VSCodeVim extension.
 }
 ```
 
+Additionally, for VSCodeVim users, you can define a custom keybinding to open the explorer. Add the following to your `settings.json`:
+```json
+    "vim.normalModeKeyBindings": [
+    {
+      "before": ["<leader>", "e"],
+      "commands": [
+        "workbench.view.explorer"
+      ]
+    }
+]
+```
+
 
 ## Usage
 
@@ -62,6 +76,7 @@ This is all the features that are available and coming soon in the future.
 | **Keybinding** | **on Editor** | **on File Explorer** | Note |
 |:---:|:---:|:---:|:---:|
 | `CTRL + N` | Open and focus on file explorer view. (vim NORMAL mode only) | Close explorer view and change focus to editor view. | If you want to keep file explorer view open all the time, you can change `nerdtree.hideSidebarWhenOpenFile` setting following [here](#configuration). |
+| `ESC` | - | Focus on editor view. | - |
 | `J`, `K`, `H` and `L` | - | Moving around with VIM keybinding | `J` = `DOWN`, `K` = `UP`, `H` = `LEFT`, `L` = `RIGHT` |
 | `Enter` | - | Open selected `file` in current active editor or Expand folder tree | You can hide File Explorer every time you open a file by changing `nerdtree.alwaysShowSidebar` setting following [here](#configuration). |
 | `T` | - | Open selected `file` in a new tab | You can hide File Explorer every time you open a file by changing `nerdtree.alwaysShowSidebar` setting following [here](#configuration). |
@@ -71,7 +86,7 @@ This is all the features that are available and coming soon in the future.
 | `M -> C` | - | Copy a `file`. | - |
 | `M -> V` | - | Paste a `file`. | - |
 | `M -> R` | - | Rename a `file`. | - |
-
+| `ESC`	   | -  | focuse to editor
 
 ## Setting
 
