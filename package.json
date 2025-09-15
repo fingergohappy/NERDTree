@@ -29,7 +29,8 @@
   "activationEvents": [
     "onCommand:nerdtree.unfocusSidebarOrClose",
     "onCommand:nerdtree.openFile",
-    "onCommand:nerdtree.openFileNewWindow"
+    "onCommand:nerdtree.openFileNewWindow",
+    "onCommand:nerdtree.focusEditor"
   ],
   "main": "./dist/extension.js",
   "contributes": {
@@ -53,6 +54,11 @@
         "key": "ctrl+n",
         "command": "nerdtree.unfocusSidebarOrClose",
         "when": "sideBarVisible && filesExplorerFocus"
+      },
+      {
+        "key": "escape",
+        "command": "nerdtree.focusEditor",
+        "when": "filesExplorerFocus"
       },
       {
         "key": "ctrl+n",
